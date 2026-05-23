@@ -1,0 +1,1409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lohitha Bandaru — Senior AI/ML Architect · Generative AI · Pricing Intelligence</title>
+<meta name="description" content="Portfolio of Lohitha Bandaru — Senior AI/ML Architect with 16+ years architecting Generative AI, agentic systems, and enterprise pricing intelligence on GCP, SAP S/4HANA, and PriceFx." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Tokens ---------- */
+  :root {
+    --bg: #060b1a;
+    --bg-2: #0a1228;
+    --panel: #0e1830;
+    --panel-2: #111c38;
+    --line: rgba(120, 170, 255, 0.10);
+    --line-strong: rgba(120, 170, 255, 0.22);
+    --ink: #e6ecff;
+    --ink-dim: #9fb0d8;
+    --ink-mute: #6b7ca6;
+    --accent: #5eead4;
+    --accent-2: #7c9cff;
+    --accent-warm: #c4b5fd;
+    --grad: linear-gradient(135deg, #5eead4 0%, #7c9cff 60%, #c4b5fd 100%);
+    --shadow: 0 30px 80px -30px rgba(94, 234, 212, 0.25);
+    --radius: 14px;
+    --maxw: 1180px;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Sora', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--accent); color: #04121a; }
+
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(900px 600px at 12% -10%, rgba(124, 156, 255, 0.18), transparent 60%),
+      radial-gradient(700px 500px at 100% 10%, rgba(94, 234, 212, 0.12), transparent 60%),
+      radial-gradient(800px 600px at 50% 110%, rgba(196, 181, 253, 0.08), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  body::after {
+    content: "";
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(120, 170, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(120, 170, 255, 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(circle at 50% 30%, black 0%, transparent 75%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--accent-2); }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; position: relative; z-index: 1; }
+  section { padding: 100px 0; position: relative; z-index: 1; }
+  section + section { border-top: 1px solid var(--line); }
+
+  /* ---------- Nav ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(14px);
+    background: rgba(6, 11, 26, 0.7);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 28px; max-width: var(--maxw); margin: 0 auto;
+  }
+  .brand {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600; letter-spacing: .02em;
+    color: var(--ink);
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 14px var(--accent); }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a {
+    color: var(--ink-dim);
+    font-size: 14px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+    letter-spacing: .01em;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  @media (max-width: 820px) { .nav-links { display: none; } }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    min-height: calc(100vh - 60px);
+    display: flex; align-items: center;
+    padding: 80px 0 60px;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 70px;
+    align-items: center;
+    width: 100%;
+  }
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 50px; text-align: left; }
+  }
+  .hero-inner { max-width: 720px; }
+
+  /* Portrait */
+  .portrait-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+  }
+  .portrait-wrap::before {
+    content: "";
+    position: absolute; inset: -8px;
+    border-radius: 50%;
+    background: var(--grad);
+    filter: blur(28px);
+    opacity: 0.45;
+    z-index: 0;
+  }
+  .portrait-ring {
+    position: relative;
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    background: var(--grad);
+    padding: 4px;
+    box-shadow: 0 30px 80px -20px rgba(94, 234, 212, 0.4);
+    z-index: 1;
+  }
+  .portrait {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    background: var(--panel);
+  }
+  /* Decorative orbiting dot */
+  .portrait-wrap .orbit {
+    position: absolute; inset: -10px;
+    border: 1px dashed rgba(94, 234, 212, 0.35);
+    border-radius: 50%;
+    animation: spin 30s linear infinite;
+    z-index: 0;
+  }
+  .portrait-wrap .orbit::before {
+    content: "";
+    position: absolute; top: -5px; left: 50%;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 16px var(--accent);
+    transform: translateX(-50%);
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) {
+    .portrait-wrap .orbit { animation: none; }
+  }
+
+  /* Nav avatar */
+  .brand-avatar {
+    width: 28px; height: 28px; border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid var(--accent);
+    background: var(--panel);
+  }
+
+  /* Hero social icons */
+  .social-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 26px;
+  }
+  .social-row a {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--line-strong);
+    background: rgba(255,255,255,0.02);
+    display: grid; place-items: center;
+    color: var(--ink-dim);
+    transition: all .25s ease;
+  }
+  .social-row a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px -10px rgba(94, 234, 212, 0.5);
+  }
+  .social-row svg { width: 18px; height: 18px; }
+
+  /* Scroll down indicator */
+  .scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 36px;
+    transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: var(--ink-mute);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 2;
+  }
+  .scroll-down:hover { color: var(--accent); }
+  .scroll-down svg {
+    width: 22px; height: 22px;
+    animation: bob 2s ease-in-out infinite;
+  }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(6px); }
+  }
+  @media (prefers-reduced-motion: reduce) { .scroll-down svg { animation: none; } }
+  @media (max-width: 900px) { .scroll-down { display: none; } }
+  .hero { position: relative; }
+  .hello {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    color: var(--accent);
+    letter-spacing: .02em;
+    margin-bottom: 20px;
+    display: inline-flex; align-items: center; gap: 12px;
+  }
+  .hello::before {
+    content: ""; width: 28px; height: 1px; background: var(--accent);
+  }
+
+  h1.display {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: clamp(52px, 8vw, 108px);
+    line-height: 0.96;
+    letter-spacing: -0.035em;
+    margin: 0 0 16px;
+    background: linear-gradient(180deg, #ffffff 20%, #9fb0d8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  h2.role {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1.05;
+    margin: 0 0 28px;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .lede {
+    font-size: 19px;
+    color: var(--ink-dim);
+    max-width: 680px;
+    margin: 0 0 40px;
+  }
+  .lede strong { color: var(--ink); font-weight: 500; }
+
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    font-family: 'Sora', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all .25s ease;
+    border: 1px solid var(--line-strong);
+    color: var(--ink);
+    background: rgba(255,255,255,0.02);
+  }
+  .btn:hover { transform: translateY(-2px); border-color: var(--accent); color: var(--accent); }
+  .btn.primary {
+    background: var(--accent);
+    color: #04121a;
+    border-color: var(--accent);
+    box-shadow: 0 12px 30px -10px rgba(94, 234, 212, 0.5);
+  }
+  .btn.primary:hover { background: #7ff0db; color: #04121a; border-color: #7ff0db; }
+  .btn svg { width: 16px; height: 16px; }
+
+  /* ---------- Section heads ---------- */
+  .sec-head { text-align: center; margin-bottom: 56px; }
+  .sec-head h2 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: clamp(32px, 5vw, 48px);
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+    background: linear-gradient(180deg, #ffffff 20%, var(--ink-dim) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .sec-head .rule {
+    width: 60px; height: 3px;
+    background: var(--grad);
+    margin: 0 auto;
+    border-radius: 3px;
+  }
+
+  /* ---------- About ---------- */
+  .about-wrap {
+    max-width: 880px; margin: 0 auto;
+    text-align: center;
+  }
+  .about-wrap p {
+    font-size: 18px;
+    color: var(--ink-dim);
+    margin: 0 0 20px;
+    line-height: 1.65;
+  }
+  .about-wrap p strong { color: var(--ink); font-weight: 500; }
+  .about-wrap p em {
+    font-style: normal;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* About + inline Education two-column layout */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 44px;
+    align-items: start;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  .about-grid .about-wrap {
+    max-width: none; margin: 0;
+    text-align: left;
+  }
+  .about-grid .about-wrap p { font-size: 17px; }
+  .about-grid .stats { margin-top: 32px; }
+  .edu-inline { min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+  .edu-inline .edu-heading {
+    display: flex; align-items: center; gap: 10px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--ink);
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+  .edu-inline .edu-heading::before {
+    content: ""; width: 22px; height: 2px; background: var(--grad);
+    border-radius: 2px;
+  }
+  .edu-inline .edu-card {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 22px;
+  }
+  .edu-inline .edu-card .sch-icon {
+    margin: 0; flex: 0 0 auto;
+    width: 44px; height: 44px;
+    font-size: 20px;
+  }
+  .edu-inline .edu-card .sch-icon svg { width: 22px; height: 22px; }
+  .edu-inline .edu-card .edu-body { flex: 1; min-width: 0; }
+  .edu-inline .edu-card h3 { font-size: 16px; margin-bottom: 4px; }
+  .edu-inline .edu-card .deg { font-size: 13.5px; margin-bottom: 6px; }
+  .edu-inline .edu-card .gpa {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+  .edu-inline .edu-card .meta { padding-top: 10px; font-size: 11.5px; }
+  .edu-inline .hon-list {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .edu-inline .hon-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    color: var(--ink-dim);
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+  .edu-inline .hon-list li::before {
+    content: "▸";
+    color: var(--accent);
+    flex: 0 0 auto;
+    margin-top: 1px;
+  }
+  .edu-inline .hon-list li strong { color: var(--ink); font-weight: 500; }
+  @media (max-width: 880px) {
+    .about-grid { grid-template-columns: 1fr; gap: 36px; }
+    .about-grid .about-wrap { text-align: center; }
+    .about-grid .about-wrap p { font-size: 18px; }
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 48px;
+  }
+  @media (max-width: 640px) { .stats { grid-template-columns: 1fr; } }
+  .stat {
+    background: linear-gradient(180deg, var(--panel-2), var(--panel));
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px 22px;
+    text-align: center;
+    transition: border-color .3s, transform .3s;
+  }
+  .stat:hover { border-color: var(--accent); transform: translateY(-4px); }
+  .stat .num {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: block;
+  }
+  .stat .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-dim);
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    margin-top: 10px;
+  }
+
+  /* ---------- Education ---------- */
+  .edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 22px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .edu-card {
+    background: linear-gradient(160deg, var(--panel-2), var(--panel));
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: border-color .3s, transform .3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .edu-card::before {
+    content: "";
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--grad);
+  }
+  .edu-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+  .edu-card .sch-icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(94,234,212,0.2), rgba(124,156,255,0.2));
+    display: grid; place-items: center;
+    color: var(--accent);
+    font-family: 'Instrument Serif', serif;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  .edu-card h3 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0 0 6px;
+    color: var(--ink);
+  }
+  .edu-card .deg {
+    color: var(--accent);
+    font-size: 14.5px;
+    margin: 0 0 10px;
+  }
+  .edu-card .meta {
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-mute);
+    padding-top: 14px;
+    border-top: 1px dashed var(--line);
+  }
+
+  /* ---------- Experience ---------- */
+  .job {
+    background: linear-gradient(160deg, var(--panel-2), var(--panel));
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 32px;
+    margin-bottom: 24px;
+    transition: border-color .3s, transform .3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .job:last-child { margin-bottom: 0; }
+  .job::before {
+    content: "";
+    position: absolute; top: 0; left: 0; bottom: 0; width: 3px;
+    background: var(--grad);
+  }
+  .job:hover { border-color: var(--accent); transform: translateX(4px); }
+
+  .job-head {
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px;
+    margin-bottom: 8px;
+  }
+  .job-head h3 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    margin: 0;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .job-sub {
+    color: var(--accent);
+    font-size: 15px;
+    margin: 0 0 18px;
+    font-weight: 500;
+  }
+  .job-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    white-space: nowrap;
+  }
+  .job ul { padding-left: 0; list-style: none; margin: 0 0 18px; }
+  .job ul li {
+    color: var(--ink-dim);
+    font-size: 15px;
+    padding: 5px 0 5px 22px;
+    position: relative;
+    line-height: 1.55;
+  }
+  .job ul li::before {
+    content: "▸";
+    position: absolute; left: 0; top: 5px;
+    color: var(--accent);
+  }
+  .job ul li strong { color: var(--ink); font-weight: 600; }
+
+  /* Tag pills used across experience/projects/skills */
+  .tag-row {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-top: 6px;
+  }
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    color: var(--ink-dim);
+    padding: 5px 11px;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.02);
+    transition: all .2s;
+  }
+  .tag:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ---------- Projects ---------- */
+  .proj-list {
+    display: flex; flex-direction: column; gap: 22px;
+  }
+  .proj {
+    background: linear-gradient(160deg, var(--panel-2), var(--panel));
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 30px 32px;
+    position: relative;
+    transition: border-color .3s, transform .3s;
+    overflow: hidden;
+  }
+  .proj::before {
+    content: "";
+    position: absolute; top: -40%; right: -10%; width: 240px; height: 240px;
+    background: radial-gradient(circle, rgba(94,234,212,0.12), transparent 70%);
+    pointer-events: none;
+  }
+  .proj:hover { border-color: var(--accent); transform: translateY(-4px); }
+  .proj .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 10px;
+    border: 1px solid rgba(94,234,212,0.3);
+    border-radius: 999px;
+    background: rgba(94,234,212,0.06);
+  }
+  .proj h3 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    margin: 0 0 4px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .proj .sub {
+    color: var(--accent-2);
+    font-size: 14px;
+    margin: 0 0 16px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .proj ul { padding-left: 0; list-style: none; margin: 0 0 16px; }
+  .proj ul li {
+    color: var(--ink-dim);
+    font-size: 15px;
+    padding: 4px 0 4px 20px;
+    position: relative;
+    line-height: 1.55;
+  }
+  .proj ul li::before {
+    content: "▸";
+    position: absolute; left: 0; top: 4px;
+    color: var(--accent);
+  }
+
+  /* ---------- Skills ---------- */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  .skill-block {
+    background: linear-gradient(180deg, var(--panel-2), var(--panel));
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: border-color .3s, transform .3s;
+  }
+  .skill-block:hover { border-color: var(--accent); transform: translateY(-4px); }
+  .skill-block:last-child {
+    grid-column: 1 / -1;
+    max-width: 520px;
+    width: 100%;
+    justify-self: center;
+  }
+  .skill-block h4 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--ink);
+    margin: 0 0 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+
+  /* ---------- Publications ---------- */
+  .pub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 22px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .pub {
+    background: linear-gradient(180deg, var(--panel-2), var(--panel));
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 26px;
+    transition: border-color .3s, transform .3s;
+    position: relative;
+  }
+  .pub:hover { border-color: var(--accent); transform: translateY(-4px); }
+  .pub .pub-ico {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(94,234,212,0.2), rgba(196,181,253,0.2));
+    display: grid; place-items: center;
+    color: var(--accent);
+    font-family: 'Instrument Serif', serif;
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+  .pub h3 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    margin: 0 0 6px;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .pub .src {
+    color: var(--accent);
+    font-size: 12.5px;
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0 0 12px;
+  }
+  .pub p {
+    color: var(--ink-dim);
+    font-size: 14.5px;
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact-card {
+    text-align: center;
+    padding: 70px 28px 80px;
+    border: 1px solid var(--line-strong);
+    background:
+      radial-gradient(600px 300px at 50% 0%, rgba(94,234,212,0.10), transparent 70%),
+      linear-gradient(180deg, var(--panel-2), var(--panel));
+    border-radius: 22px;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .contact-card h2 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: clamp(34px, 5vw, 52px);
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+    background: linear-gradient(180deg, #ffffff 20%, var(--ink-dim) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .contact-card p {
+    color: var(--ink-dim);
+    max-width: 520px; margin: 0 auto 36px;
+    font-size: 17px;
+  }
+  .contact-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .loc {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--ink-mute);
+    font-size: 13px;
+    margin-top: 30px;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .loc::before { content: "◆"; color: var(--accent); }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 36px 0;
+    text-align: center;
+    color: var(--ink-mute);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: .05em;
+  }
+  footer .arrow { color: var(--accent); }
+
+  /* ---------- Reveal animation ---------- */
+  html.js .reveal:not(.in) { opacity: 0; transform: translateY(20px); }
+  .reveal { transition: opacity .8s ease, transform .8s ease; }
+  @media (prefers-reduced-motion: reduce) {
+    html.js .reveal:not(.in) { opacity: 1; transform: none; }
+    .reveal { transition: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#home">
+      <img class="brand-avatar" src="assets/lohitha.jpg" alt="Lohitha Bandaru" onerror="this.onerror=null;this.src='assets/lohitha.svg';" />
+      Lohitha B<span style="color:var(--accent)">.</span>
+    </a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#achievements">Outcomes</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-inner">
+        <div class="hello">Hello, I'm</div>
+        <h1 class="display">Lohitha Bandaru</h1>
+        <h2 class="role">Senior AI/ML Architect · Generative AI · MLOps · Pricing Intelligence</h2>
+        <p class="lede">
+          Translating ambiguous commercial problems into <strong>production intelligence</strong> —
+          architecting enterprise pricing platforms that pair <strong>Generative AI, agentic
+          orchestration, and rigorous MLOps</strong> with the operational discipline of SAP S/4HANA
+          and PriceFx. Outcome first, governance always, value measured in basis points.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="#contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            Get In Touch
+          </a>
+          <a class="btn" href="#projects">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            View Projects
+          </a>
+        </div>
+
+        <div class="social-row">
+          <a href="mailto:lohitha.bandaru@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/lohithabandaru" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 11.01-4.13 2.06 2.06 0 01-.01 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="tel:+16263486418" aria-label="Phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="portrait-wrap">
+        <div class="orbit" aria-hidden="true"></div>
+        <div class="portrait-ring">
+          <img class="portrait"
+               src="assets/lohitha.jpg"
+               alt="Portrait of Lohitha Bandaru"
+               onerror="this.onerror=null;this.src='assets/lohitha.svg';" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="scroll-down" href="#about" aria-label="Scroll to About">
+    Scroll Down
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+  </a>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>About Me</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="about-grid reveal">
+      <div class="about-col">
+        <div class="about-wrap">
+          <p>
+            <strong>Senior AI/ML Architect</strong> with <em>16+ years</em> translating ambiguous
+            commercial problems into production intelligence. Recognized for architecting
+            <strong>enterprise pricing platforms</strong> that pair Generative AI, agentic
+            orchestration, and rigorous MLOps with the operational discipline of
+            <strong>SAP S/4HANA</strong> and <strong>PriceFx</strong>.
+          </p>
+          <p>
+            Trusted partner to finance and commercial leadership in quantifying margin lift,
+            accelerating quote velocity, and replacing static rule engines with adaptive,
+            explainable AI. Today I lead AI &amp; pricing architecture at
+            <strong>Mohawk Industries</strong> — bringing an executive lens to every build:
+            <em>outcome first, governance always, value measured in basis points.</em>
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <span class="num">16+</span>
+            <div class="label">Years of Experience</div>
+          </div>
+          <div class="stat">
+            <span class="num">&lt;200ms</span>
+            <div class="label">Quote Inference Latency</div>
+          </div>
+          <div class="stat">
+            <span class="num">$B+</span>
+            <div class="label">Catalog Under Pricing AI</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-inline">
+        <h3 class="edu-heading">Education</h3>
+        <div class="edu-card">
+          <div class="sch-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 4 2 10l10 6 10-6Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+          </div>
+          <div class="edu-body">
+            <h3>Bachelor of Computer Science</h3>
+            <p class="deg">Computer Science &amp; Engineering</p>
+            <p class="gpa">Foundation for a 16+ year AI &amp; enterprise career</p>
+            <div class="meta">
+              <span>Hyderabad, India</span>
+              <span>2005</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="edu-heading">Signature Outcomes</h3>
+        <div class="edu-card">
+          <div class="sch-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="m8.21 13.89-2.21 7.11 6-3.6 6 3.6-2.21-7.11"/></svg>
+          </div>
+          <div class="edu-body">
+            <ul class="hon-list">
+              <li><strong>Margin expansion at scale</strong> across a multi-billion-dollar catalog</li>
+              <li><strong>Sub-200 ms</strong> quote scoring during peak commercial flows</li>
+              <li><strong>Generative AI in production</strong> via grounded RAG assistant</li>
+              <li><strong>Governed MLOps</strong> with registry, lineage, drift &amp; A/B controls</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SIGNATURE OUTCOMES (cards) ===================== -->
+<section id="achievements">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Signature Outcomes</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="pub-grid">
+      <div class="pub reveal">
+        <div class="pub-ico">★</div>
+        <h3>Margin Expansion at Scale</h3>
+        <p class="src">AI Pricing Platform · Multi-Billion-$ Catalog</p>
+        <p>Architected an AI pricing platform lifting realized margin through elasticity-driven recommendations, validated via A/B and shadow deployments before any production promotion.</p>
+      </div>
+
+      <div class="pub reveal">
+        <div class="pub-ico">⚡</div>
+        <h3>Quote Velocity</h3>
+        <p class="src">Real-Time Inference · &lt;200 ms</p>
+        <p>Delivered sub-200 ms inference for real-time quote scoring during peak commercial flows, compressing quote-to-cash cycles and unlocking front-line seller productivity.</p>
+      </div>
+
+      <div class="pub reveal">
+        <div class="pub-ico">✦</div>
+        <h3>Generative AI in Production</h3>
+        <p class="src">RAG Assistant · Grounded Context</p>
+        <p>Stood up a RAG assistant grounded in customer agreements, historical pricing rationale, and CPL governance — giving commercial teams instant, explainable context inside their workflow.</p>
+      </div>
+
+      <div class="pub reveal">
+        <div class="pub-ico">⚖</div>
+        <h3>Governed ML Operations</h3>
+        <p class="src">Vertex AI · Registry · Drift · Lineage</p>
+        <p>Instituted Vertex AI Model Registry, lineage capture, drift monitoring, and versioned artifacts — turning model deployment into an auditable, board-defensible discipline.</p>
+      </div>
+
+      <div class="pub reveal">
+        <div class="pub-ico">∞</div>
+        <h3>Executive Alignment</h3>
+        <p class="src">ROI in Finance Terms · Quarterly Cadence</p>
+        <p>Quantified uplift in finance terms and presented model ROI through quarterly executive dashboards — securing repeated reinvestment in the AI roadmap.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Work Experience</h2>
+      <div class="rule"></div>
+    </div>
+
+    <article class="job reveal">
+      <div class="job-head">
+        <h3>Senior AI/ML &amp; Pricing Architect</h3>
+        <span class="job-meta">Sep 2022 — Present</span>
+      </div>
+      <p class="job-sub">Mohawk Industries Inc., Calhoun, GA · AI-Driven Pricing Intelligence on GCP, SAP S/4HANA, PriceFx</p>
+      <ul>
+        <li><strong>Target Architecture.</strong> Defined the GCP target state with <strong>AlloyDB</strong> as the operational analytics and <strong>pgvector</strong> embedding store, enabling high-throughput feature retrieval across millions of customer-product combinations.</li>
+        <li><strong>Agentic Orchestration.</strong> Built a <strong>LangGraph</strong> agentic layer sequencing list price calculation, promotion eligibility, discount optimization, and quote shaping across heterogeneous data sources and downstream systems.</li>
+        <li><strong>Real-Time Inference.</strong> Deployed inference on Cloud Functions and Cloud Run with autoscaling, sustaining <strong>sub-200 ms</strong> response for quote scoring during peak commercial flows.</li>
+        <li><strong>MLOps at Scale.</strong> Engineered Airflow (Cloud Composer) pipelines for feature engineering, scheduled retraining, drift detection, and lineage capture across elasticity and uplift models.</li>
+        <li><strong>Generative AI Assistant.</strong> Delivered a <strong>RAG assistant</strong> surfacing historical pricing rationale, customer agreements, and CPL context to commercial teams, grounded in AlloyDB-backed embeddings.</li>
+        <li><strong>Model Governance.</strong> Established <strong>Vertex AI Model Registry</strong>, versioned artifacts, A/B experiments, and shadow deployments — validating margin lift before any production promotion.</li>
+        <li><strong>PriceFx Extensibility.</strong> Authored <strong>Groovy</strong> logic extensions that invoke ML inference inside PriceFx — injecting model outputs directly into list price, promotion, and quote pipelines with full audit trail.</li>
+        <li><strong>Executive Storytelling.</strong> Partnered with finance and commercial leadership to quantify uplift and present model ROI in quarterly executive dashboards, securing continued AI investment.</li>
+        <li><strong>Talent Multiplier.</strong> Mentored engineers across Python, Airflow DAG patterns, prompt engineering, and Responsible AI guardrails — building a durable internal AI bench.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">GCP Vertex AI</span><span class="tag">AlloyDB</span><span class="tag">pgvector</span>
+        <span class="tag">LangGraph</span><span class="tag">LangChain</span><span class="tag">RAG</span>
+        <span class="tag">SAP S/4HANA</span><span class="tag">PriceFx</span><span class="tag">Groovy</span>
+        <span class="tag">Cloud Run</span><span class="tag">Cloud Functions</span><span class="tag">Pub/Sub</span>
+        <span class="tag">Airflow</span><span class="tag">MLOps</span><span class="tag">Python</span>
+      </div>
+    </article>
+
+    <article class="job reveal">
+      <div class="job-head">
+        <h3>Senior Lead Developer</h3>
+        <span class="job-meta">Sep 2021 — Aug 2022</span>
+      </div>
+      <p class="job-sub">Intone Networks · Client: State of Georgia, Department of Labor · Pandemic Unemployment Assistance &amp; Virtual Claims Agent</p>
+      <ul>
+        <li><strong>Mission-Critical Delivery.</strong> Delivered a high-availability claims platform serving self-employed workers, freelancers, and independent contractors — processing intake, eligibility, and benefit disbursement at state scale during peak crisis demand.</li>
+        <li><strong>Service Architecture.</strong> Designed <strong>Java and Spring Boot</strong> microservices fronted by REST APIs aligned to OpenAPI 2.0, integrated with relational and NoSQL stores for audit-grade reporting.</li>
+        <li><strong>Conversational AI Pilot.</strong> Prototyped an early virtual claims agent for claim-status inquiries, materially reducing call-center load during peak periods.</li>
+        <li><strong>Release Governance.</strong> Owned change management across SIT, UAT, DR, and Production — including load-balancer cutover and rehearsed rollback playbooks.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">REST</span>
+        <span class="tag">OpenAPI 2.0</span><span class="tag">Microservices</span><span class="tag">NoSQL</span>
+        <span class="tag">Conversational AI</span><span class="tag">DR/UAT</span>
+      </div>
+    </article>
+
+    <article class="job reveal">
+      <div class="job-head">
+        <h3>Senior Software Developer</h3>
+        <span class="job-meta">Mar 2017 — Aug 2021</span>
+      </div>
+      <p class="job-sub">Intone Networks · Client: Amway · MAGIC – Global Distributor Management</p>
+      <ul>
+        <li><strong>Global Platform Architecture.</strong> Architected REST and SOAP services for distributor registration, contracts, renewals, reactivations, and lifecycle events across Amway's global markets.</li>
+        <li><strong>Single Customer View.</strong> Designed <strong>DB2 stored procedures</strong> and tuned SQL access paths to unify identity, address, communications, privacy, tax, and related-party data into a single customer view.</li>
+        <li><strong>Throughput Engineering.</strong> Owned <strong>IBM WebSphere</strong> sizing, JVM tuning, and IO partitioning to sustain steady throughput under heavy distributor activity — and built multi-threaded synchronization workers keeping load-balanced caches consistent across data centers.</li>
+        <li><strong>Engineering Leadership.</strong> Led code reviews and mentored offshore engineers, driving enterprise change management with rollback strategies, upstream/downstream impact notifications, and post-deploy validation.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">Java</span><span class="tag">REST</span><span class="tag">SOAP</span>
+        <span class="tag">DB2</span><span class="tag">IBM WebSphere</span><span class="tag">JVM Tuning</span>
+        <span class="tag">Multi-Threading</span>
+      </div>
+    </article>
+
+    <article class="job reveal">
+      <div class="job-head">
+        <h3>Senior Software Engineer</h3>
+        <span class="job-meta">Sep 2016 — Nov 2016</span>
+      </div>
+      <p class="job-sub">GOMIAPP · Client: Virtusa (Dell SecureWorks) · Mobile Security Dashboard</p>
+      <ul>
+        <li><strong>Incident Modernization.</strong> Built a mobile incident-escalation platform pushing security alerts directly to end users — replacing manual call-out workflows for the SecureWorks tech support team.</li>
+        <li><strong>Service Engineering.</strong> Implemented RESTful services with HATEOAS, JMS-MQ async messaging, Spring AOP audit, and MyBatis hierarchical MySQL persistence; automated CI with Maven and Jenkins.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">REST/HATEOAS</span><span class="tag">JMS-MQ</span><span class="tag">Spring AOP</span>
+        <span class="tag">MyBatis</span><span class="tag">MySQL</span><span class="tag">Maven</span><span class="tag">Jenkins</span>
+      </div>
+    </article>
+
+    <article class="job reveal">
+      <div class="job-head">
+        <h3>Senior Full-Stack Developer</h3>
+        <span class="job-meta">Apr 2016 — Aug 2016</span>
+      </div>
+      <p class="job-sub">GOMIAPP · Client: Anixter Inc. · Customer Program Profile Pricing</p>
+      <ul>
+        <li><strong>Real-Time Pricing Intake.</strong> Delivered a global pricing intake web application that fed real-time data into the <strong>PROS pricing engine</strong> for Anixter's manufactured-goods catalog.</li>
+        <li><strong>Full-Stack Engineering.</strong> Built PrimeFaces and JSF MVC front end with REST and SOAP integrations, Spring JdbcTemplate persistence, and Spring AOP auditing.</li>
+        <li><strong>Performance Discipline.</strong> Authored DB2 stored procedures for hierarchical pricing and bulk loads; monitored JVM health with Wily and tuned thread schedulers across load-balanced servers.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">PrimeFaces</span><span class="tag">JSF</span><span class="tag">Spring JdbcTemplate</span>
+        <span class="tag">DB2</span><span class="tag">PROS</span><span class="tag">Wily</span>
+      </div>
+    </article>
+
+    <article class="job reveal">
+      <div class="job-head">
+        <h3>Senior Application Developer</h3>
+        <span class="job-meta">Sep 2012 — Feb 2016</span>
+      </div>
+      <p class="job-sub">JPMorgan Chase, Hyderabad, India · IVR Configuration &amp; Emergency Rules Middleware</p>
+      <ul>
+        <li><strong>Always-On Routing.</strong> Owned middleware managing emergency call routing, business-hours automation, and configuration across heterogeneous IVR systems built on .NET, EJB, SOAP, REST, and VXML.</li>
+        <li><strong>Service Design.</strong> Engineered services using PrimeFaces &amp; JSF, Spring WebFlow, REST and SOAP, JMS-MQ, and JPA / Hibernate; provided Level 3 production support and led post-production stabilization.</li>
+        <li><strong>Release Automation.</strong> Engineered automated release scripts with SSH for promotions across environments and led code reviews using ClearCase version control.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">Spring WebFlow</span><span class="tag">JPA/Hibernate</span><span class="tag">JMS-MQ</span>
+        <span class="tag">SOAP/REST</span><span class="tag">VXML</span><span class="tag">ClearCase</span>
+      </div>
+    </article>
+
+    <article class="job reveal">
+      <div class="job-head">
+        <h3>Technology Analyst</h3>
+        <span class="job-meta">Apr 2011 — Apr 2012</span>
+      </div>
+      <p class="job-sub">Infosys · Client: Bank of America, Chennai, India · Informatica Migration Automation</p>
+      <ul>
+        <li><strong>Process Automation.</strong> Built a web-based migration tool automating <strong>Informatica</strong> code promotions across 7 environments and 140 applications — with multi-level architectural approvals and scheduled migration triggers.</li>
+        <li><strong>Audit Readiness.</strong> Reduced manual effort during external and internal audits and supported migration tracking and stakeholder communications.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">Informatica</span><span class="tag">Java</span><span class="tag">Migration Automation</span>
+        <span class="tag">Audit Tooling</span>
+      </div>
+    </article>
+
+    <article class="job reveal">
+      <div class="job-head">
+        <h3>Onsite Coordinator &amp; Developer</h3>
+        <span class="job-meta">Dec 2007 — Feb 2010</span>
+      </div>
+      <p class="job-sub">Satyam Technologies · Client: Scotiabank · India / Canada · Multi-Factor Authentication</p>
+      <ul>
+        <li><strong>Security Modernization.</strong> Integrated <strong>Entrust Identity Guard</strong> into Scotia Online, introducing machine-based authentication and challenge-question flows on top of password login.</li>
+        <li><strong>Onshore / Offshore Delivery.</strong> Coordinated with offshore teams, gathered requirements directly with the client, and led deployment across SIT, UAT, and Production.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">Entrust Identity Guard</span><span class="tag">MFA</span><span class="tag">Onshore/Offshore</span>
+      </div>
+    </article>
+
+    <article class="job reveal">
+      <div class="job-head">
+        <h3>Software Engineer</h3>
+        <span class="job-meta">Oct 2005 — Sep 2007</span>
+      </div>
+      <p class="job-sub">American Express, Chennai, India · File Services – Global Tracking &amp; Monitoring</p>
+      <ul>
+        <li><strong>Operational Visibility.</strong> Built a global web console giving business and technology teams real-time visibility into file transfer, validation, and transformation between American Express and external submitters.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">Java</span><span class="tag">File Services</span><span class="tag">Monitoring</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Featured Projects</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="proj-list">
+
+      <article class="proj reveal">
+        <span class="year">2024 — Present</span>
+        <h3>AI-Driven Enterprise Pricing Platform</h3>
+        <p class="sub">GCP · AlloyDB · LangGraph · PriceFx · SAP S/4HANA</p>
+        <ul>
+          <li>End-to-end architecture and delivery of an <strong>AI-powered pricing platform</strong> replacing legacy rule-only engines with adaptive, explainable recommendations across list price, promotion, discount, and quote workflows for a multi-billion-dollar product catalog.</li>
+          <li>Target-state design on <strong>GCP with AlloyDB + pgvector</strong> embedding store, enabling high-throughput feature retrieval across millions of customer-product combinations.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">GCP</span><span class="tag">AlloyDB</span><span class="tag">pgvector</span>
+          <span class="tag">PriceFx</span><span class="tag">SAP S/4HANA</span><span class="tag">Vertex AI</span>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <span class="year">2023 — Present</span>
+        <h3>Agentic Pricing Orchestrator</h3>
+        <p class="sub">LangGraph · Multi-Agent · Quote Shaping</p>
+        <ul>
+          <li>Built a <strong>LangGraph agentic layer</strong> sequencing list price calculation, promotion eligibility, discount optimization, and quote shaping across heterogeneous data sources and downstream systems.</li>
+          <li>Authored Groovy logic extensions inside <strong>PriceFx</strong> that invoke ML inference directly in list-price, promotion, and quote pipelines — with full audit trail.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">LangGraph</span><span class="tag">Agentic AI</span><span class="tag">PriceFx</span>
+          <span class="tag">Groovy</span><span class="tag">Quote-to-Cash</span>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <span class="year">2024</span>
+        <h3>Generative AI Pricing Assistant (RAG)</h3>
+        <p class="sub">RAG · pgvector · Customer Agreements · CPL Governance</p>
+        <ul>
+          <li>Delivered a <strong>RAG assistant</strong> surfacing historical pricing rationale, customer agreements, and CPL context to commercial teams — grounded in AlloyDB-backed embeddings.</li>
+          <li>Gave commercial teams instant, explainable context inside their workflow — replacing back-and-forth with searchable, cited rationale.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">Vertex AI</span>
+          <span class="tag">pgvector</span><span class="tag">Responsible AI</span>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <span class="year">2023</span>
+        <h3>Real-Time Quote Inference Service</h3>
+        <p class="sub">Cloud Run · Cloud Functions · Autoscaling · &lt;200 ms</p>
+        <ul>
+          <li>Deployed inference on <strong>Cloud Functions and Cloud Run</strong> with autoscaling, sustaining sub-200 ms response for quote scoring during peak commercial flows.</li>
+          <li>Compressed quote-to-cash cycle times and unlocked front-line seller productivity at scale.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">Cloud Run</span><span class="tag">Cloud Functions</span><span class="tag">FastAPI</span>
+          <span class="tag">Python</span><span class="tag">Low Latency</span>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <span class="year">2023</span>
+        <h3>Governed MLOps Platform</h3>
+        <p class="sub">Vertex AI Model Registry · Drift · A/B · Shadow</p>
+        <ul>
+          <li>Engineered Airflow (<strong>Cloud Composer</strong>) pipelines for feature engineering, scheduled retraining, drift detection, and lineage capture across elasticity and uplift models.</li>
+          <li>Established <strong>Vertex AI Model Registry</strong>, versioned artifacts, A/B experiments, and shadow deployments — validating margin lift before any production promotion.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">Airflow</span><span class="tag">Cloud Composer</span><span class="tag">Vertex AI</span>
+          <span class="tag">MLflow</span><span class="tag">Drift Monitoring</span>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <span class="year">2021 — 2022</span>
+        <h3>Virtual Claims Agent — Pandemic Unemployment</h3>
+        <p class="sub">Java · Spring Boot · Conversational AI Pilot</p>
+        <ul>
+          <li>Delivered a <strong>high-availability claims platform</strong> for the State of Georgia DOL — serving self-employed workers, freelancers, and independent contractors at state scale during peak crisis demand.</li>
+          <li>Prototyped an early <strong>virtual claims agent</strong> for claim-status inquiries, materially reducing call-center load during peak periods.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">REST</span>
+          <span class="tag">OpenAPI</span><span class="tag">NoSQL</span><span class="tag">Conversational AI</span>
+        </div>
+      </article>
+
+    </div>
+    <p style="color:var(--ink-mute); font-family:'JetBrains Mono',monospace; font-size:12px; margin-top:26px; text-align:center;">
+      // Descriptions summarize work shipped under enterprise NDA.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Core Capabilities</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-block reveal">
+        <h4>AI &amp; Generative Systems</h4>
+        <div class="tag-row">
+          <span class="tag">LangGraph</span><span class="tag">LangChain</span>
+          <span class="tag">RAG Architecture</span><span class="tag">Vertex AI</span>
+          <span class="tag">Vector Embeddings (pgvector)</span>
+          <span class="tag">Price Elasticity Modeling</span>
+          <span class="tag">Discount Uplift Modeling</span>
+          <span class="tag">Agentic Orchestration</span>
+          <span class="tag">Responsible AI Guardrails</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <h4>Cloud &amp; Data Platforms</h4>
+        <div class="tag-row">
+          <span class="tag">Google Cloud</span><span class="tag">AlloyDB</span>
+          <span class="tag">BigQuery</span><span class="tag">Vertex AI</span>
+          <span class="tag">Cloud Run</span><span class="tag">Cloud Functions</span>
+          <span class="tag">Pub/Sub</span><span class="tag">Dataflow</span>
+          <span class="tag">Cloud Composer</span><span class="tag">Azure</span>
+          <span class="tag">SAP S/4HANA</span><span class="tag">PriceFx SaaS</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <h4>MLOps &amp; Engineering Discipline</h4>
+        <div class="tag-row">
+          <span class="tag">Airflow</span><span class="tag">MLflow</span>
+          <span class="tag">Model Registry &amp; Versioning</span>
+          <span class="tag">Drift Monitoring</span>
+          <span class="tag">A/B &amp; Shadow Deployments</span>
+          <span class="tag">CI/CD (Jenkins)</span>
+          <span class="tag">Docker</span><span class="tag">Kubernetes</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <h4>Pricing &amp; Commercial Systems</h4>
+        <div class="tag-row">
+          <span class="tag">PriceFx Native Modeling</span>
+          <span class="tag">CPQ &amp; Quote-to-Cash</span>
+          <span class="tag">List Price Strategy</span>
+          <span class="tag">Promotion Strategy</span>
+          <span class="tag">CPL Governance</span>
+          <span class="tag">Dynamic Discounting</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <h4>Languages &amp; Frameworks</h4>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Java 8/11/17</span>
+          <span class="tag">Groovy</span><span class="tag">Spring Boot</span>
+          <span class="tag">FastAPI</span><span class="tag">REST</span>
+          <span class="tag">GraphQL</span><span class="tag">JAX-RS</span>
+          <span class="tag">Microservices</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <h4>Data Engineering</h4>
+        <div class="tag-row">
+          <span class="tag">AlloyDB</span><span class="tag">PostgreSQL</span>
+          <span class="tag">Oracle</span><span class="tag">DB2</span>
+          <span class="tag">MS SQL Server</span><span class="tag">MongoDB</span>
+          <span class="tag">Redis</span><span class="tag">Stored Procedures</span>
+          <span class="tag">SQL Optimization</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <h4>Leadership Practice</h4>
+        <div class="tag-row">
+          <span class="tag">Target-State Architecture</span>
+          <span class="tag">Executive Storytelling</span>
+          <span class="tag">Mentorship (Data · MLOps · App)</span>
+          <span class="tag">Agile Delivery</span>
+          <span class="tag">Code Review Culture</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <h2>Get In Touch</h2>
+      <p>Open to conversations about enterprise pricing AI, agentic systems, RAG, and translating ambiguous commercial problems into auditable, board-defensible models. Whether you have a question or just want to say hi, I'll get back to you.</p>
+      <div class="contact-row">
+        <a class="btn primary" href="mailto:lohitha.bandaru@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          lohitha.bandaru@gmail.com
+        </a>
+        <a class="btn" href="tel:+16263486418">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +1 (626) 348-6418
+        </a>
+        <a class="btn" href="https://www.linkedin.com/in/lohithabandaru" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 11.01-4.13 2.06 2.06 0 01-.01 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          LinkedIn
+        </a>
+        <a class="btn" href="Lohitha_Bandaru_Resume_2026.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download Resume
+        </a>
+      </div>
+      <div class="loc">Atlanta, GA · United States</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Designed &amp; Built for Lohitha Bandaru <span class="arrow">-&gt;</span> © 2026
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const links = document.querySelectorAll('.nav-links a');
+  const sections = ['home','about','achievements','experience','projects','skills','contact']
+    .map(id => document.getElementById(id)).filter(Boolean);
+  const onScroll = () => {
+    const y = window.scrollY + 140;
+    let active = sections[0];
+    for (const s of sections) { if (s.offsetTop <= y) active = s; }
+    links.forEach(a => {
+      a.style.color = (a.getAttribute('href') === '#' + active.id) ? 'var(--accent)' : '';
+    });
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>
+</body>
+</html>
